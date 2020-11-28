@@ -12,11 +12,11 @@ console.log();
 var watch=readlineSync.question(chalk.blue('Do you still Watch Doraemon? '));
 if(watch==='yes')
 {
-  console.log('Fun Fact: '+'Me too!');
+  console.log(chalk.red('Fun Fact: '+'Me too!'));
 }
 else
 {
-  console.log('Fun Fact: '+'I DO!😀');
+  console.log(chalk.red('Fun Fact: '+'I DO!😀'));
 }
 console.log();
 var ready=readlineSync.question(chalk.blue('Ready to play Doraemon quiz? '));
@@ -29,28 +29,28 @@ else
   console.log(chalk.blue("Don't waste your time😤 Bye."));
   var g=readlineSync.question('');
 }
-
+console.log();
 var score=0;
 
 function play(question, answer, response)
 {
   var flag=false;
-  var user_ans=readlineSync.question(question);
+  var user_ans=readlineSync.question(chalk.blue(question));
   for(var i=0;i<answer.length;i++)
   {
     if(user_ans===answer[i])
     {
-      console.log("You gotcha! ");
+      console.log(chalk.green("You gotcha! "));
       score++;
       flag=true;
     }
   }
   if(flag===false)
    {
-     console.log("You got it wrong! ");
+     console.log(chalk.bgCyan("You got it wrong! "));
    }
   console.log();
-  console.log(response);
+  console.log(chalk.green(response));
   console.log();
     
   
@@ -87,3 +87,5 @@ for(var i=0;i<questions.length;i++)
 {
   play(questions[i].quest,questions[i].ans,questions[i].response);
 }
+
+console.log(chalk.red("So, This is your FINAL SCORE: "+score));
