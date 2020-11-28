@@ -1,8 +1,13 @@
+var figlet=require('figlet');
+console.log(figlet.textSync('Doraemon', { horizontalLayout: 'full' }));
+
+
+
 var readlineSync=require('readline-sync');
 
 var chalk=require('chalk');
 
-//questions in blue, explanations in green, wring answers in red with cyan bg
+
 var name=readlineSync.question(chalk.blue('Your Good name? '));
 
 
@@ -65,6 +70,8 @@ var questions = [
     ans:["yellow","Yellow"],
     response: "Dorami is the cute sister robot of Doraemon who lives with Sewashi (Nobita's great grandson in the 22nd century). She occasionally helps Nobita and is shown as a more advanced robot than Doraemon."
   },
+
+
   {
     quest: "What is the name of bully Gian's sister? \nA. Jaiko\nB. Shizuka\nC. Dorami\n",
     ans:["Jaiko","jaiko"],
