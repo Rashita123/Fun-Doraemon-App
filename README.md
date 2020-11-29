@@ -12,3 +12,4 @@ npm Modules used:
 1. Chalk --> For the styling (adding colors to the text and highlighting text)
 2. figlet --> To create ASCII art from text.
 3. boxen --> To make a box to display score at the end.
+4. clear --> To clear the previous questions.
