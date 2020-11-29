@@ -2,6 +2,11 @@ var figlet=require('figlet');
 console.log(figlet.textSync('Doraemon', { horizontalLayout: 'full' }));
 
 
+const boxen = require('boxen');
+ 
+
+
+
 
 var readlineSync=require('readline-sync');
 
@@ -95,4 +100,6 @@ for(var i=0;i<questions.length;i++)
   play(questions[i].quest,questions[i].ans,questions[i].response);
 }
 
-console.log(chalk.red("So, This is your FINAL SCORE: "+score));
+// console.log(chalk.red("So, This is your FINAL SCORE: "+score));
+
+console.log(boxen('Score: '+score, {padding: 1, borderColor:'red', margin: 1, borderStyle: 'round'}));
