@@ -40,7 +40,7 @@ var score = 0;
 
 function play(question, options, answer, response) {
   var flag = false;
-  var user_ans = readlineSync.keyInSelect(options, chalk.blue(question));
+  var user_ans = readlineSync.keyInSelect(options, chalk.blue(question),{cancel: 'Not Sure'});
   
     if (options[user_ans] === answer) {
       console.log(chalk.green("You gotcha! "));
@@ -86,9 +86,9 @@ var questions = [
     response: "Suneo is shown to be a wealthy kid who remains with Gian only to not be bullied by him. He actually likes Nobita and admits it often, much to the chagrin of Gian.",
   },
   {
-    quest: "Nobita fears more?\nA. Mom\nB. Jian\nConfusing Afff!\n",
-    options: ["Mom"],
-    ans: ["Jian", "jian", "Mom", "mom", "a", "A", "b", "B"],
+    quest: "Nobita fears more?",
+    options: ["Mom","Jian","Confusing Aff"],
+    ans: ["Mom"],
     response: "I am not sure of the answer, but this seems more accurate! 😁"
   },
 ]
