@@ -18,23 +18,35 @@ var name = readlineSync.question(chalk.blue('Your Good name? '));
 console.log(chalk.red('Welcome! ' + name));
 console.log();
 var watch = readlineSync.keyInYN(chalk.blue('Do you still Watch Doraemon?'));
-if (watch) {
+if (!watch) {
+  process.exit();
+}
+else{
+  if (watch) {
   console.log(chalk.red('Fun Fact: ' + 'Me too!'));
+  }
+  else {
+    console.log(chalk.red('Fun Fact: ' + 'I DO!😀'));
+  }
 }
-else {
-  console.log(chalk.red('Fun Fact: ' + 'I DO!😀'));
-}
+
 console.log();
 var ready = readlineSync.keyInYN(chalk.blue('Ready to play Doraemon quiz?'));
-if (ready) {
+if(!ready){process.exit();}
+
+
+else{
+  if (ready) {
   console.log(chalk.red("Let's Go! "));
   var gt= readlineSync.question('');
   clear();
+  }
+  else {
+    console.log(chalk.blue("Don't waste your time😤 Bye."));
+    var g = readlineSync.question('');
+  }
 }
-else {
-  console.log(chalk.blue("Don't waste your time😤 Bye."));
-  var g = readlineSync.question('');
-}
+
 console.log();
 var score = 0;
 
@@ -80,7 +92,7 @@ var questions = [
 
   {
     quest: "Who is Gian's sidekick?",
-    options: ["Nobita","Sumeo"],
+    options: ["Nobita","Suneo"],
     ans: "Suneo",
 
     response: "Suneo is shown to be a wealthy kid who remains with Gian only to not be bullied by him. He actually likes Nobita and admits it often, much to the chagrin of Gian.",
