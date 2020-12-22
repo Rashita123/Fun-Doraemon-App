@@ -43,6 +43,7 @@ else{
   }
   else {
     console.log(chalk.blue("Don't waste your time😤 Bye."));
+    process.exit();
     var g = readlineSync.question('');
   }
 }
