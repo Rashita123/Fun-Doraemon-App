@@ -74,21 +74,21 @@ var questions = [
   {
     quest: "What is the name of bully Gian's sister?",
     options: ["Jaiko","Shizuka","Dorami"],
-    ans: ["Jaiko"],
+    ans: "Jaiko",
     response: "Jaiko is the fat ugly sister of Gian whom Gian loves very much. She loves to create mangas and enter them in contests. Her pen name is Christine Goda. She loves her pet dog very much, even though Gian sometimes gets annoyed with this fact.",
   },
 
   {
     quest: "Who is Gian's sidekick?",
     options: ["Nobita","Sumeo"],
-    ans: ["Suneo"],
+    ans: "Suneo",
 
     response: "Suneo is shown to be a wealthy kid who remains with Gian only to not be bullied by him. He actually likes Nobita and admits it often, much to the chagrin of Gian.",
   },
   {
     quest: "Nobita fears more?",
     options: ["Mom","Jian","Confusing Aff"],
-    ans: ["Mom"],
+    ans: "Mom",
     response: "I am not sure of the answer, but this seems more accurate! 😁"
   },
 ]
